@@ -2,7 +2,8 @@ FROM node as builder
 
 COPY . /app
 WORKDIR /app
-RUN npm install && npm run radicale
+RUN npm install
+RUN npm run radicale
 
 
 FROM alpine:edge
